@@ -41,7 +41,7 @@ var tests = []struct {
 func TestCase(t *testing.T) {
 	for _, req := range tests {
 		input := req.request
-		cmd := fmt.Sprintf("echo \"%s\" | smart-home-binary/smarthome-darwin-arm64-0.2.2 -B", input)
+		cmd := fmt.Sprintf("echo \"%s\" | ../smart-home-binary/smarthome-darwin-arm64-0.2.2 -B", input)
 
 		trueAns, err := exec.Command("bash", "-c", cmd).Output()
 		fmt.Printf("\n%+v\n", req)
